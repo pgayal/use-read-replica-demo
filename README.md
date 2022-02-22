@@ -32,9 +32,10 @@ All the queries done using the read-only repositories will go against the read r
 
 <b>Properties</b>: `spring.readonly.datasource` in `application.properties`
 
+<br/><br/>
 ### Implementation Steps to Move Heavy Load Select Queries to Read-Replica
 
-1. New Repositories 
+1. New Repository
    - Create new read-only repository for related entity - refer [EngagementReadOnlyRepository.java](/src/main/java/com/example/usereadreplicademo/repositories/EngagementReadOnlyRepository.java)
    - Extends `ReadOnlyBaseRepository`
    - Annotate `@ReadOnlyRepository` - VERY IMPORTANT
@@ -42,7 +43,7 @@ All the queries done using the read-only repositories will go against the read r
 3. Inject this new repository in the required service class and call method
 4. DONE
 
-
+<br/><br/>
 ### Classes to Refer
 1. [application.properties](/src/main/resources/application.properties)
 2. [PrimaryDataSourceConfiguration.java](/src/main/java/com/example/usereadreplicademo/config/PrimaryDataSourceConfiguration.java)
