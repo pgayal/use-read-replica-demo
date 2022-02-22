@@ -1,6 +1,8 @@
 # Use Read Replica Demo for Select Queries
 
 This is a spring boot application to demo the use of readonly-db/read-replica for select queries.
+Run the [database-initialize-script.sql](/src/main/resources/database-initialize-script.sql) file to create test databases on local mysql 
+and update the credentials in the [application.properties](/src/main/resources/application.properties) accordingly.
 
 ## How does it work?
 
