@@ -29,7 +29,13 @@ This is same data source config as we currently have. We just need to make we ad
 Configuration: [ReadOnlyDataSourceConfiguration.java](/src/main/java/com/example/usereadreplicademo/config/ReadOnlyDataSourceConfiguration.java)
 This is new data source configured to connect to read-replica and register the JPA repositories annotated with `@ReadOnlyRepository`
 All the queries done using the read-only repositories will go against the read replica.
-
+```
+@EnableJpaRepositories(
+        basePackages = "com.example.usereadreplicademo",
+        includeFilters = @ComponentScan.Filter(ReadOnlyRepository.class),
+        entityManagerFactoryRef = "readOnlyEntityManagerFactory"
+)
+```
 <b>Properties</b>: `spring.readonly.datasource` in `application.properties`
 
 <br/><br/>
