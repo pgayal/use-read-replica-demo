@@ -1,5 +1,5 @@
 CREATE DATABASE `readonly-demo`;
-USE `readonly-demo-ro`
+USE `readonly-demo`;
 
 DROP TABLE IF EXISTS `engagement`;
 CREATE TABLE `engagement` (
@@ -20,7 +20,7 @@ CREATE TABLE `engagement` (
 INSERT INTO `engagement` VALUES (26,1,1,1,'2001-09-09 01:46:40',1,'Test insert manual');
 
 CREATE DATABASE `readonly-demo-ro`;
-USE `readonly-demo-ro`
+USE `readonly-demo-ro`;
 
 DROP TABLE IF EXISTS `engagement`;
 CREATE TABLE `engagement` (
