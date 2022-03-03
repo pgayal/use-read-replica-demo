@@ -1,4 +1,4 @@
-# Use Read Replica Demo for Select Queries
+# Use Read Replica Demo for Select Queries using ReadOnlyRepository
 
 This is a spring boot application to demo the use of readonly-db/read-replica for select queries.
 
